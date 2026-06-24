@@ -1982,112 +1982,112 @@ reboots your air unit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="125"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="134"/>
         <source>Show stats per card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="146"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="155"/>
         <source>dBm of each ant/card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="168"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="177"/>
         <source>Loss caution</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="196"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="205"/>
         <source>Loss warn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="224"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="233"/>
         <source>dBm low warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="245"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="254"/>
         <source>Show pollution estimate %</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="266"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="275"/>
         <source>Show signal quality %</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="305"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="314"/>
         <source>Blocks lost: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="314"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="323"/>
         <source>Blocks recovered: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="323"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="332"/>
         <source>Fragments recovered: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="332"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="341"/>
         <source>AIR TX: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="341"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="350"/>
         <source>AIR TX tele: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="350"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="359"/>
         <source>AIR TX video0: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="359"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="368"/>
         <source>AIR RX: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="368"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="377"/>
         <source>TX PWR Air: %1 %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="428"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="437"/>
         <source>dBm</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="451"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="460"/>
         <source></source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="472"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="481"/>
         <source>Loss: %1%</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="485"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="494"/>
         <source>Pollution: %1 pps</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="498"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="507"/>
         <source>Quality: %1%</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="511"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="520"/>
         <source>TX: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="524"/>
+        <location filename="../qml/ui/widgets/LinkDownRSSIWidget.qml" line="533"/>
         <source>RX: %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2604,7 +2604,7 @@ RETRIES</source>
     </message>
     <message>
         <location filename="../qml/ui/configpopup/openhd_settings/MavlinkParamPanel.qml" line="83"/>
-        <location filename="../qml/ui/configpopup/openhd_settings/MavlinkParamPanel.qml" line="287"/>
+        <location filename="../qml/ui/configpopup/openhd_settings/MavlinkParamPanel.qml" line="332"/>
         <source></source>
         <translation type="unfinished"></translation>
     </message>
@@ -2614,23 +2614,28 @@ RETRIES</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/configpopup/openhd_settings/MavlinkParamPanel.qml" line="190"/>
+        <location filename="../qml/ui/configpopup/openhd_settings/MavlinkParamPanel.qml" line="172"/>
+        <source>Enable debug antennas display on screen. Displays 2 lines for dBm: maximum combined, and individual antenna dBm values.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/ui/configpopup/openhd_settings/MavlinkParamPanel.qml" line="234"/>
         <source>This parameter is not documented yet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/configpopup/openhd_settings/MavlinkParamPanel.qml" line="193"/>
+        <location filename="../qml/ui/configpopup/openhd_settings/MavlinkParamPanel.qml" line="237"/>
         <source>This parameter is read-only (cannot be edited)
 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/configpopup/openhd_settings/MavlinkParamPanel.qml" line="225"/>
+        <location filename="../qml/ui/configpopup/openhd_settings/MavlinkParamPanel.qml" line="269"/>
         <source>This param is whitelisted (You should not edit it from here / editing can break things))</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/ui/configpopup/openhd_settings/MavlinkParamPanel.qml" line="271"/>
+        <location filename="../qml/ui/configpopup/openhd_settings/MavlinkParamPanel.qml" line="316"/>
         <source>Please fetch</source>
         <translation type="unfinished"></translation>
     </message>

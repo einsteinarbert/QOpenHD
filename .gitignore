@@ -87,3 +87,6 @@ qopenhd_metatypes.json
 qopenhd_qmltyperegistrations.cpp
 
 CMakeLists.txt.user
+
+# Android
+android/.gradle/

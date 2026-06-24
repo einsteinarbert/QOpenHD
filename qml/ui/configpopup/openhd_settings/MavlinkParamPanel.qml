@@ -145,6 +145,50 @@ Rectangle {
     }
 
     Component {
+        id: groundHeaderComponent
+        Rectangle {
+            color: settings.screen_settings_openhd_parameters_transparent ? "transparent" : "#8cbfd7f3"
+            height: 64
+            width: listView.width - 12
+            Row {
+                spacing: 30
+                height: parent.height
+                width: parent.width
+                anchors.left: parent.left
+                anchors.leftMargin: 12
+                Text {
+                    anchors.verticalCenter: parent.verticalCenter
+                    width: 180
+                    text: "debug antena dBm"
+                    font.bold: true
+                    font.pixelSize: 14
+                    color: settings.screen_settings_openhd_parameters_transparent ? settings.color_text : "black"
+                    style: settings.screen_settings_openhd_parameters_transparent ? Text.Outline : Text.Normal
+                    styleColor: settings.color_glow
+                }
+                ButtonIconInfo {
+                    anchors.verticalCenter: parent.verticalCenter
+                    onClicked: {
+                        _messageBoxInstance.set_text_and_show(qsTr("Enable debug antennas display on screen. Displays 2 lines for dBm: maximum combined, and individual antenna dBm values."))
+                    }
+                }
+                Switch {
+                    anchors.verticalCenter: parent.verticalCenter
+                    checked: settings.debug_antenna_dbm
+                    onCheckedChanged: settings.debug_antenna_dbm = checked
+                }
+            }
+            Rectangle {
+                width: parent.width
+                height: 1
+                color: settings.screen_settings_openhd_parameters_transparent ? "white" : "black"
+                anchors.bottom: parent.bottom
+                opacity: 0.2
+            }
+        }
+    }
+
+    Component {
         id: delegateMavlinkSettingsValue
 
         Rectangle{
@@ -259,6 +303,7 @@ Rectangle {
                 model: m_instanceMavlinkSettingsModel
                 delegate: delegateMavlinkSettingsValue
                 visible: !please_fetch_item.visible && m_instanceCheckIsAvlie.is_alive
+                header: m_name === "GROUND" ? groundHeaderComponent : null
             }
         }
         Item{

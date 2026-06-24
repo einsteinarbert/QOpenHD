@@ -141,6 +141,7 @@ Settings {
     property bool downlink_dbm_warning: true
     property bool downlink_signal_quality_show: false
     property bool downlink_pollution_show: false
+    property bool debug_antenna_dbm: true
 
     property bool show_uplink_rssi: true
     property bool uplink_rssi_declutter: false

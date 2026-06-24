@@ -14,7 +14,7 @@ import "../elements"
 BaseWidget {
     id: linkDownRSSIWidget
     width: 112
-    height: 48
+    height: settings.debug_antenna_dbm ? 62 : 48
 
     visible: settings.show_downlink_rssi && settings.show_widgets
 
@@ -87,6 +87,15 @@ BaseWidget {
 
     function get_text_dbm(){
         var dbm=_ohdSystemGround.current_rx_rssi;
+        if(settings.debug_antenna_dbm){
+            var ant1 = _wifi_card_gnd0.curr_rx_rssi_dbm_antenna1;
+            var ant2 = _wifi_card_gnd0.curr_rx_rssi_dbm_antenna2;
+            var max_ant = Math.max(ant1, ant2);
+            // Only use per-antenna max if at least one antenna has valid data
+            if(max_ant > -127){
+                dbm = max_ant;
+            }
+        }
         if(dbm<=-127){
             return "N/A";
         }
@@ -546,10 +555,38 @@ BaseWidget {
                 style: Text.Outline
                 styleColor: settings.color_glow
             }
+            // debug: antenna 2 dBm for card index 0
+            Text {
+                visible: settings.debug_antenna_dbm && settings.downlink_show_dbm_and_packets_per_card && _wifi_card_gnd0.alive
+                text: "[2] " + _wifi_card_gnd0.curr_rx_rssi_dbm_antenna2 + " dBm"
+                color: settings.color_text
+                verticalAlignment: Text.AlignVCenter
+                font.pixelSize: 12
+                font.family: settings.font_text
+                horizontalAlignment: Text.AlignLeft
+                wrapMode: Text.NoWrap
+                elide: Text.ElideRight
+                style: Text.Outline
+                styleColor: settings.color_glow
+            }
             // dBm and packets for card index 1
             Text {
                 visible: settings.downlink_show_dbm_and_packets_per_card  && _wifi_card_gnd1.alive
                 text: text_for_card(1)
+                color: settings.color_text
+                verticalAlignment: Text.AlignVCenter
+                font.pixelSize: 12
+                font.family: settings.font_text
+                horizontalAlignment: Text.AlignLeft
+                wrapMode: Text.NoWrap
+                elide: Text.ElideRight
+                style: Text.Outline
+                styleColor: settings.color_glow
+            }
+            // debug: antenna 2 dBm for card index 1
+            Text {
+                visible: settings.debug_antenna_dbm && settings.downlink_show_dbm_and_packets_per_card && _wifi_card_gnd1.alive
+                text: "[2] " + _wifi_card_gnd1.curr_rx_rssi_dbm_antenna2 + " dBm"
                 color: settings.color_text
                 verticalAlignment: Text.AlignVCenter
                 font.pixelSize: 12
@@ -574,10 +611,38 @@ BaseWidget {
                 style: Text.Outline
                 styleColor: settings.color_glow
             }
+            // debug: antenna 2 dBm for card index 2
+            Text {
+                visible: settings.debug_antenna_dbm && settings.downlink_show_dbm_and_packets_per_card && _wifi_card_gnd2.alive
+                text: "[2] " + _wifi_card_gnd2.curr_rx_rssi_dbm_antenna2 + " dBm"
+                color: settings.color_text
+                verticalAlignment: Text.AlignVCenter
+                font.pixelSize: 12
+                font.family: settings.font_text
+                horizontalAlignment: Text.AlignLeft
+                wrapMode: Text.NoWrap
+                elide: Text.ElideRight
+                style: Text.Outline
+                styleColor: settings.color_glow
+            }
             // dBm and packets for card index 3
             Text {
                 visible: settings.downlink_show_dbm_and_packets_per_card && _wifi_card_gnd3.alive
                 text: text_for_card(3)
+                color: settings.color_text
+                verticalAlignment: Text.AlignVCenter
+                font.pixelSize: 12
+                font.family: settings.font_text
+                horizontalAlignment: Text.AlignLeft
+                wrapMode: Text.NoWrap
+                elide: Text.ElideRight
+                style: Text.Outline
+                styleColor: settings.color_glow
+            }
+            // debug: antenna 2 dBm for card index 3
+            Text {
+                visible: settings.debug_antenna_dbm && settings.downlink_show_dbm_and_packets_per_card && _wifi_card_gnd3.alive
+                text: "[2] " + _wifi_card_gnd3.curr_rx_rssi_dbm_antenna2 + " dBm"
                 color: settings.color_text
                 verticalAlignment: Text.AlignVCenter
                 font.pixelSize: 12
