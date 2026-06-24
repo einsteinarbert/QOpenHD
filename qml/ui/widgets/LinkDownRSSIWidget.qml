@@ -64,13 +64,13 @@ BaseWidget {
         if(card_idx==2)card=_wifi_card_gnd2;
         if(card_idx==3)card=_wifi_card_gnd3;
         // use rolling to not pollute the UI too much
-        var ret="["+(card_idx+1)+"] " + int_to_string_N_chars_wide(card.n_received_packets_rolling,4) + " ";
+        var ret="[all] " + int_to_string_N_chars_wide(card.n_received_packets_rolling,4) + " ";
         ret+=" "+ int_to_string_N_chars_wide(card.packet_loss_perc,2)+"% "
         // Number(card.packet_loss_perc).toLocaleString( Qt.locale(), 'f', 0)
         // dBm of card in general
         ret += card.curr_rx_rssi_dbm + " dBm";
         if(settings.downlink_dbm_per_card_show_multiple_antennas){
-             ret+=(card.curr_rx_rssi_dbm_antenna1+"/"+card.curr_rx_rssi_dbm_antenna2+" dBm");
+             // fallback behavior if enabled
         }
         /*var dbm_antenna2=card.curr_rx_rssi_dbm_antenna2;
         var show_2_antenna_dbm_values=settings.downlink_dbm_per_card_show_multiple_antennas && dbm_antenna2>-127;
@@ -555,10 +555,24 @@ BaseWidget {
                 style: Text.Outline
                 styleColor: settings.color_glow
             }
+            // debug: antenna 1 dBm for card index 0
+            Text {
+                visible: settings.debug_antenna_dbm && settings.downlink_show_dbm_and_packets_per_card && _wifi_card_gnd0.alive
+                text: "  [1] " + _wifi_card_gnd0.curr_rx_rssi_dbm_antenna1 + " dBm"
+                color: settings.color_text
+                verticalAlignment: Text.AlignVCenter
+                font.pixelSize: 12
+                font.family: settings.font_text
+                horizontalAlignment: Text.AlignLeft
+                wrapMode: Text.NoWrap
+                elide: Text.ElideRight
+                style: Text.Outline
+                styleColor: settings.color_glow
+            }
             // debug: antenna 2 dBm for card index 0
             Text {
                 visible: settings.debug_antenna_dbm && settings.downlink_show_dbm_and_packets_per_card && _wifi_card_gnd0.alive
-                text: "[2] " + _wifi_card_gnd0.curr_rx_rssi_dbm_antenna2 + " dBm"
+                text: "  [2] " + _wifi_card_gnd0.curr_rx_rssi_dbm_antenna2 + " dBm"
                 color: settings.color_text
                 verticalAlignment: Text.AlignVCenter
                 font.pixelSize: 12
@@ -583,10 +597,24 @@ BaseWidget {
                 style: Text.Outline
                 styleColor: settings.color_glow
             }
+            // debug: antenna 1 dBm for card index 1
+            Text {
+                visible: settings.debug_antenna_dbm && settings.downlink_show_dbm_and_packets_per_card && _wifi_card_gnd1.alive
+                text: "  [1] " + _wifi_card_gnd1.curr_rx_rssi_dbm_antenna1 + " dBm"
+                color: settings.color_text
+                verticalAlignment: Text.AlignVCenter
+                font.pixelSize: 12
+                font.family: settings.font_text
+                horizontalAlignment: Text.AlignLeft
+                wrapMode: Text.NoWrap
+                elide: Text.ElideRight
+                style: Text.Outline
+                styleColor: settings.color_glow
+            }
             // debug: antenna 2 dBm for card index 1
             Text {
                 visible: settings.debug_antenna_dbm && settings.downlink_show_dbm_and_packets_per_card && _wifi_card_gnd1.alive
-                text: "[2] " + _wifi_card_gnd1.curr_rx_rssi_dbm_antenna2 + " dBm"
+                text: "  [2] " + _wifi_card_gnd1.curr_rx_rssi_dbm_antenna2 + " dBm"
                 color: settings.color_text
                 verticalAlignment: Text.AlignVCenter
                 font.pixelSize: 12
@@ -611,10 +639,24 @@ BaseWidget {
                 style: Text.Outline
                 styleColor: settings.color_glow
             }
+            // debug: antenna 1 dBm for card index 2
+            Text {
+                visible: settings.debug_antenna_dbm && settings.downlink_show_dbm_and_packets_per_card && _wifi_card_gnd2.alive
+                text: "  [1] " + _wifi_card_gnd2.curr_rx_rssi_dbm_antenna1 + " dBm"
+                color: settings.color_text
+                verticalAlignment: Text.AlignVCenter
+                font.pixelSize: 12
+                font.family: settings.font_text
+                horizontalAlignment: Text.AlignLeft
+                wrapMode: Text.NoWrap
+                elide: Text.ElideRight
+                style: Text.Outline
+                styleColor: settings.color_glow
+            }
             // debug: antenna 2 dBm for card index 2
             Text {
                 visible: settings.debug_antenna_dbm && settings.downlink_show_dbm_and_packets_per_card && _wifi_card_gnd2.alive
-                text: "[2] " + _wifi_card_gnd2.curr_rx_rssi_dbm_antenna2 + " dBm"
+                text: "  [2] " + _wifi_card_gnd2.curr_rx_rssi_dbm_antenna2 + " dBm"
                 color: settings.color_text
                 verticalAlignment: Text.AlignVCenter
                 font.pixelSize: 12
@@ -639,10 +681,24 @@ BaseWidget {
                 style: Text.Outline
                 styleColor: settings.color_glow
             }
+            // debug: antenna 1 dBm for card index 3
+            Text {
+                visible: settings.debug_antenna_dbm && settings.downlink_show_dbm_and_packets_per_card && _wifi_card_gnd3.alive
+                text: "  [1] " + _wifi_card_gnd3.curr_rx_rssi_dbm_antenna1 + " dBm"
+                color: settings.color_text
+                verticalAlignment: Text.AlignVCenter
+                font.pixelSize: 12
+                font.family: settings.font_text
+                horizontalAlignment: Text.AlignLeft
+                wrapMode: Text.NoWrap
+                elide: Text.ElideRight
+                style: Text.Outline
+                styleColor: settings.color_glow
+            }
             // debug: antenna 2 dBm for card index 3
             Text {
                 visible: settings.debug_antenna_dbm && settings.downlink_show_dbm_and_packets_per_card && _wifi_card_gnd3.alive
-                text: "[2] " + _wifi_card_gnd3.curr_rx_rssi_dbm_antenna2 + " dBm"
+                text: "  [2] " + _wifi_card_gnd3.curr_rx_rssi_dbm_antenna2 + " dBm"
                 color: settings.color_text
                 verticalAlignment: Text.AlignVCenter
                 font.pixelSize: 12
